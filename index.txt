@@ -1,0 +1,142 @@
+<?php
+
+include_once 'product_list.php';
+require 'config/config_path.php';
+$path =$conf['site_url'];
+
+
+?>
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" href="<?php echo $path; ?>style/ecom.css">
+	<link rel="stylesheet" href="<?php echo $path; ?>style/gallery.css">
+	<script type="text/javascript" src="<?php echo $path; ?>storescripts/jquery/jquery.js"></script>
+	<script type="text/javascript" src="<?php echo $path; ?>storescripts/gallery.js"></script>
+
+</head>
+
+<body>
+
+
+<body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+	<div id="page_wraper">
+
+		<?php include_once("config/template_header.php")?>
+
+			<section >
+
+					<article>
+						<p>carosel of images of proucts</p>
+<div style="float:left"</div>
+
+<div class="fb-like" data-href="<?php echo $path; ?>" data-send="true" data-layout="box_count" data-width="100" data-show-faces="false" data-font="arial" ></div>
+<br>
+<br>
+<script language=JavaScript>
+document.write ('<a href="');
+document.write('http://www.stumbleupon.com/submit?url='+document.URL+'&title='+document.title.replace(/ /g,'+')+'">');
+document.write ('<img border=0 src=images/stumbleupon.gif></a>');
+</script>
+
+<br>
+<br>
+<a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo $path; ?>" data-text="Sweet Fashion refined for tech-lovin' l" data-hashtags="<?php echo $path; ?>">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div>
+
+        					<div id="gallery">
+
+							<a href="#" class="show">
+
+							<img src="<?php echo $path; ?>images/s1.jpg" alt="Flowing Rock" width="700" height="360" title="" alt="" rel="<h3>Flowing Rock</h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "/>
+
+							</a>
+
+							<a href="#">
+
+							<img src="<?php echo $path; ?>images/s2.jpg" alt="Grass Blades" width="700" height="360" title="" alt="" rel="<h3>Grass Blades</h3>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "/>
+
+							</a>
+
+							<a href="#">
+
+							<img src="<?php echo $path; ?>images/s3.jpg" alt="Ladybug" width="700" height="360" title="" alt="" rel="<h3>Ladybug</h3>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."/>
+
+							</a>
+
+								<div class="caption">
+
+									<div class="content">
+
+									</div>
+
+							</div>
+
+						</div>
+
+				<div class="clear"></div>
+
+
+				</article>
+
+				<article >
+
+					    <section >
+
+					    	<div id="flexbox" >
+
+        					<div id="box-2" >
+
+            					<h1 ><a name="aproducts">New items to the store</a></h1>
+
+            					<table class="frontpage">
+
+            						<tr>
+
+            							<?php echo $dynamicList;?>
+
+            						</tr>
+
+            					</table>
+
+            					</div>
+
+       						 </div>
+
+   						 </section>
+
+					</article>
+
+				</section>
+
+			<?php include_once("config/template_footer.php")?>
+
+		</div>
+
+	</body>
+
+</html>
+
+
+ 	a:link 	
+	a:visited 	
+	a:active 	
+a:hover

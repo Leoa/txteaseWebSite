@@ -1,0 +1,4 @@
+md5 or hash for password
+toggle the add inventory form
+form validation
+sepeate code in different files

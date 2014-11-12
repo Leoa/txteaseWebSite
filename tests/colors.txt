@@ -1,0 +1,15 @@
+	if( $itemType != 'gloves'){
+						
+					$glove="";
+					$colors="";
+				}
+				
+				if( $itemType == 'gloves'){
+						
+					
+					$glove='<br> <br>Finger Tip Color:<br><div style="background-color:rgb('.$gctRed.', '.$gctGreen. ', '.$gctBlue.'); width:50px; height:50px;"></div>  Glove Color:<div style="background-color:rgb('.$gcRed.', '.$gcGreen. ', '.$gcBlue.'); width:50px; height:50px;"></div>';
+				
+				//$colors= 'Tip color'.$gctRed .''.$gctGreen .''.$gctBlue. '<br> Glove'.$gcRed .''.$gcGreen .''.$gcBlue ;
+				 
+				}
+				

@@ -1,0 +1,28 @@
+#bg {
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+.bgwidth {
+	width: 80%;
+}
+.bgheight {
+	height: 80%;
+}
+
+#page-wrap {
+	
+	position: relative;
+	width: 80%;
+	min-width: 1000px;
+	margin: 50px auto;
+	padding: 20px;
+	/* Fallback for web browsers that doesn't support RGBa */
+	background: rgb(0, 0, 0);
+	/* RGBa with 0.6 opacity */
+	background: rgba(0, 0, 0, 0.0);
+	/* For IE 5.5 - 7*/
+	filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#00000000, endColorstr=#00000000)";
+	/* For IE 8*/
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#00000000, endColorstr=#00000000)";
+}

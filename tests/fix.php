@@ -1,0 +1,61 @@
+<?php
+
+if (isset($_POST['h2'])&& !empty($_POST['h2'])){
+	
+	$h2 = $_POST['h2'];
+	
+	$i=0;
+	
+	$wasFound = false;
+	
+	// if not set, or cart array is empty 
+	
+	if (!isset($_SESSION['color_array']) || count($_SESSION['color_array'])<1){
+		
+		$_SESSION['color_array'] = array( 0 => array('color_id'=>$h2));
+		
+		
+	}else{
+		
+		// at least one item was found in the cart
+		foreach($_SESSION ['color_array'] as $each_item){
+			
+			$i++;// hold value of which associative array  with in mulitdeminalt array is pasing thru loop
+			
+			while(list($key,$value) = each($each_item)){
+				//while loop access to al key value pairs in cart_array
+				//list() Like array(), this is not really a function, but a language construct. list() is used to assign a list of variables in one operation. 
+				//each()Return the current key and value pair from an array and advance the array cursor. 
+			
+				
+				if($key == "color_id" && $value ==$h2){
+					
+					// that item is in cart already so lets adjust it quanity using araay_splice();
+					// add one to that item
+					///array_splice remove portion of array and replace it with someting else
+					
+					//input, offset, index, replacemnt
+					array_splice($_SESSION['color_array'], $i-1, 1, array(array("color_id" =>$h2)));
+					
+					$wasFound =true;
+					print_r($_SESSION['color_array']);
+				}
+				
+			}
+		
+		}
+		
+		if($wasFound == false){
+			
+			array_push($_SESSION['color_array'], array('color_id'=>$h2));
+			print_r($_SESSION['color_array']);
+			
+			
+		}
+		
+	}
+	header("location:cart.php");
+	exit();
+}
+
+?>

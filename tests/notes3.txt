@@ -1,0 +1,5 @@
+	$('#form').submit( function (){
+				
+				$.post("cart.php", { gCred: xa[0], gCgreen: xa[1], gCblue: xa[2]  } );
+				
+			});
